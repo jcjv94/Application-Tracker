@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+
+<h1>Applications</h1>
+
+<% for (app of applications) { %>
+    <div>
+        <H1><%= app.employer %></H1>
+    </div>
+<% } %>
+<%- include('../partials/footer') %>

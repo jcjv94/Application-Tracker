@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+    <h2>Add a new application</h2>
+    <form action="/applications" method="POST">
+        <label>Job Title:
+            <input type="text" name="jobTitle">
+        </label><br>
+        <label>Employer:
+            <input type="text" name="employer">
+        </label><br>
+        <label>Location:
+            <input type="text" name="location">
+        </label><br>
+        <label>Date Applied:
+            <input type="date" name="dateApplied">
+        </label><br>
+        <label>Salary Range:
+            <input type="number" name="salaryRange">
+        </label><br>
+        <label>Notes:
+            <input type="text" name="notes">
+        </label><br>
+        <input type="submit" value="Save">
+    </form>
+
+    <%- include('../partials/footer') %>

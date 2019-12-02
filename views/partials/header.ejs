@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>SEI Project 2</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="stylesheets/style.css" />
@@ -10,14 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <title>SEI Project 2</title>
 </head>
 
 <body>
     <div>
-        <nav>
-            <div>
-                <a href="">Job Apps Applied</a>
-                <ul>
+        <nav class="blue">
+            <div class="nav-wrapper">
+                <ul class="right">
                     <li>
                         <% if (user) { %>
                         <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
@@ -26,9 +26,8 @@
                         <% } %>
                     </li>
                 </ul>
+                <a href="/" >View Applications</a>
+                <a href="/applications/new">Add Application</a>
             </div>
         </nav>
     </div>
-</body>
-
-</html>
