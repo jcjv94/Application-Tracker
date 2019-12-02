@@ -2,9 +2,30 @@
 
 <h1>Applications</h1>
 
-<% for (app of applications) { %>
-    <div>
-        <H1><%= app.employer %></H1>
-    </div>
-<% } %>
+<table>
+    <thead>
+        <div>
+            <th>Job Title</th>
+            <th>Employer</th>
+            <th>Location</th>
+            <th>Date Applied</th>
+            <th>Salary Range</th>
+            <th>Notes</th>
+        </div>
+    </thead>
+    <tbody>
+        
+        <% for (app of applications) { %>
+            <tr>
+                <td><%= app.jobTitle %></td>
+                <td><%=app.employer%></td>
+                <td><%=app.location%></td>
+                <td><%=app.dateApplied%></td>
+                <td><%=app.salaryRange%></td>
+                <td><%=app.notes%></td>
+            </tr>
+            <% } %>
+
+        </tbody>
+    </table>
 <%- include('../partials/footer') %>
