@@ -5,9 +5,9 @@ var applicationsCtrl = require('../controllers/applications');
 
 router.get('/', applicationsCtrl.index);
 
-router.get('/new',applicationsCtrl.new)
+router.get('/new', applicationsCtrl.new);
 
-// router.get('/:id', applicationsCtrl.show);
+router.get('/:id', applicationsCtrl.show);
 
 router.post('/', applicationsCtrl.create);
 

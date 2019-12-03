@@ -1,11 +1,11 @@
 // const User = require('../models/user');
 
 // module.exports = {
-    // index,
-    // new: newApplication,
-    // create,
-    // addApplication,
-    // delApplication
+// index,
+// new: newApplication,
+// create,
+// addApplication,
+// delApplication
 // };
 
 // function index(req, res) {

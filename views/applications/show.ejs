@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<h2>Application Details</h2>
+
+<section class="show-page">
+
+    <div class="showItem">Job Title: </div>
+    <div class="showItem"><%= application.jobTitle %> | </div>
+    <br>
+
+    <div class="showItem">Employer: </div>
+    <div class="showItem"><%= application.employer %> | </div>
+    <br>
+
+    <div class="showItem">Location: </div>
+    <div class="showItem"><%= application.location %> | </div>
+    <br>
+
+    <div class="showItem">Date Applied: </div>
+    <div class="showItem"><%= application.dateApplied %> | </div>
+    <br>
+
+    <div class="showItem">Salary Range:</div>
+    <div class="showItem"><%= application.salaryRange %> | </div>
+    <br>
+
+    <div class="showItem">Notes: </div>
+    <div class="showItem"><%= application.notes %> | </div>
+    <br>
+
+</section>
+
+<%- include('../partials/footer') %>

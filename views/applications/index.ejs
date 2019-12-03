@@ -10,24 +10,23 @@
             <th class="center-align">Location</th>
             <th class="center-align">Date Applied</th>
             <th class="center-align">Salary Range</th>
-            <!-- <th class="center-align">Notes</th> -->
             <th class="center-align">View Info</th>
         </div>
     </thead>
     <tbody>
-        
-        <% for (app of applications) { %>
-            <tr>
-                <td class="center-align"><%= app.jobTitle %></td>
-                <td class="center-align"><%=app.employer%></td>
-                <td class="center-align"><%=app.location%></td>
-                <td class="center-align"><%=app.dateApplied%></td>
-                <td class="center-align"><%=app.salaryRange%></td>
-                <!-- <td class="center-align"><%=app.notes%></td> -->
-                <td class="center-align"> <button>Details</button></td>
-            </tr>
-            <% } %>
 
-        </tbody>
-    </table>
+        <% applications.forEach(function(application) { %>
+        <tr>
+            <td class="center-align"><%= application.jobTitle %></td>
+            <td class="center-align"><%=application.employer%></td>
+            <td class="center-align"><%=application.location%></td>
+            <td class="center-align"><%=application.dateApplied%></td>
+            <td class="center-align"><%=application.salaryRange%></td>
+            <td class="center-align"> <a href="/applications/<%=application._id %>">
+            <button type="button">DETAILS</button></a></td>
+        </tr>
+        <% }) %>
+
+    </tbody>
+</table>
 <%- include('../partials/footer') %>
