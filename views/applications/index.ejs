@@ -2,27 +2,27 @@
 
 <h1>Applications</h1>
 
-<table>
+<table class="highlight z-depth-5">
     <thead>
         <div>
-            <th>Job Title</th>
-            <th>Employer</th>
-            <th>Location</th>
-            <th>Date Applied</th>
-            <th>Salary Range</th>
-            <th>Notes</th>
+            <th class="center-align">Job Title</th>
+            <th class="center-align">Employer</th>
+            <th class="center-align">Location</th>
+            <th class="center-align">Date Applied</th>
+            <th class="center-align">Salary Range</th>
+            <th class="center-align">Notes</th>
         </div>
     </thead>
     <tbody>
         
         <% for (app of applications) { %>
             <tr>
-                <td><%= app.jobTitle %></td>
-                <td><%=app.employer%></td>
-                <td><%=app.location%></td>
-                <td><%=app.dateApplied%></td>
-                <td><%=app.salaryRange%></td>
-                <td><%=app.notes%></td>
+                <td class="center-align"><%= app.jobTitle %></td>
+                <td class="center-align"><%=app.employer%></td>
+                <td class="center-align"><%=app.location%></td>
+                <td class="center-align"><%=app.dateApplied%></td>
+                <td class="center-align"><%=app.salaryRange%></td>
+                <td class="center-align"><%=app.notes%></td>
             </tr>
             <% } %>
 
