@@ -50,28 +50,27 @@
 <br>
 
 <% if (application.interviews) { %>
-    <table>
-      <thead>
+<table>
+    <thead>
         <tr>
-          <th>Interview Date</th>
-          <th>Dress Code</th>
-          <th>Notes</th>
+            <th>Interview Date</th>
+            <th>Dress Code</th>
+            <th>Notes</th>
         </tr>
-      </thead>
-      <tbody>
+    </thead>
+    <tbody>
         <% application.interviews.forEach(function(interview) { %>
-          <tr>
+        <tr>
             <td><%= interview.interviewDate %></td>
             <td><%= interview.dressCode %></td>
             <td><%= interview.notes %></td>
-          </tr>
+        </tr>
         <% }); %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No interviews Yet</h5>
-  <% } %>
+    </tbody>
+</table>
+<% } else { %>
+<h5>No interviews Yet</h5>
+<% } %>
 </label><br>
 
 <%- include('../partials/footer') %>
-

@@ -2,7 +2,7 @@
 
 <h1>Applications</h1>
 
-<table class="highlight z-depth-5">
+<table class="highlight z-depth-2">
     <thead>
         <div>
             <th class="center-align">Job Title</th>
@@ -15,24 +15,24 @@
         </div>
     </thead>
     <tbody>
-
+        <% if (user._id.equals(user && user._id)){ %>
         <% applications.forEach(function(application) { %>
         <tr>
-            <td class="center-align"><%= application.jobTitle %></td>
+            <td class="center-align"><%=application.jobTitle%></td>
             <td class="center-align"><%=application.employer%></td>
             <td class="center-align"><%=application.location%></td>
-            <td class="center-align"><%=application.dateApplied%></td>
+            <td class="center-align"><%=application.dateApplied.toLocaleDateString()%></td>
             <td class="center-align"><%=application.salaryRange%></td>
             <td class="center-align"> <a href="/applications/<%=application._id %>">
-            <button type="button">DETAILS</button></a></td>
-
-            <% if (user._id.equals(user && user._id)) { %>
-            <td action="/applications/<%= application._id %>?_method=DELETE"
-                class="delete-app" method="POST"></td>
-            <button type="submit">X</button></a></td>
+                    <button type="button">DETAILS</button></a></td>
+            <td>
+                <form action="/applications/<%= application._id %>?_method=DELETE" class="delete-app" method="POST">
+                    <button type="submit">X</button></a>
+                </form>
+            </td>
         </tr>
-            <% }) %>
-        
+        <% })} %>
+
 
     </tbody>
 </table>

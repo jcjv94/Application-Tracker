@@ -3,9 +3,13 @@ var router = express.Router();
 var applicationsCtrl = require('../controllers/applications');
 
 
-router.get('/', applicationsCtrl.index);
+// router.get('/', (req, res)=>{
+//     res.redirect(`/applications/${req.user._id}`);
+// });
 
 router.get('/new', applicationsCtrl.new);
+router.get('/', applicationsCtrl.index);
+
 
 router.get('/:id', applicationsCtrl.show);
 

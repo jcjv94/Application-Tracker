@@ -1,4 +1,5 @@
 var Application = require('../models/application');
+var User = require('../models/user');
 
 module.exports = {
     index,
@@ -10,7 +11,9 @@ module.exports = {
 };
 
 function index(req, res) {
-    Application.find({}, function (err, applications) {
+    Application.find({
+        user: req.user._id
+    }, function (err, applications) {
         console.log("APPLICATIONS: ", applications)
         res.render('applications/index', {
             applications,
@@ -46,13 +49,14 @@ function newApplication(req, res) {
 
 function create(req, res) {
     var application = new Application(req.body);
+    application.user = req.user;
     application.save(function (err) {
         if (err) {
             console.log("ERROR!: ", err)
-            res.redirect('/applications/new');
+            res.redirect(`/applications/new`);
         } else {
             console.log("It worked, no error!", application)
-            res.redirect('/applications');
+            res.redirect(`/applications`);
         }
     });
 }
@@ -73,11 +77,8 @@ function create(req, res) {
 //     applications.splice(id, 1);
 //   }
 
-function delApplication (req, res, next) {
-    User.findOne({'applications._id': req.params.id}, function(err, user){
-        user.applications.id(req.params.id).remove();
-        user.save(function(err){
-            res.redirect('/applications');
-        })
-    })
+function delApplication(req, res, next) {
+    Application.findByIdAndDelete(req.params.id, (err) => {
+        res.redirect('/applications');
+    });
 }

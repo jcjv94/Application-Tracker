@@ -2,6 +2,7 @@
 
 <h2>Add a new application</h2>
 <form action="/applications" method="POST">
+    <input name="user" value="<%= user._id %>" style="visibility: hidden;">
     <label>Job Title:
         <input type="text" name="jobTitle">
     </label><br>

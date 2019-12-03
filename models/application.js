@@ -41,7 +41,11 @@ var applicationSchema = new mongoose.Schema({
     notes: {
         type: String
     },
-    interviews: [interviewSchema]
+    interviews: [interviewSchema],
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 }, {
     timestamps: true
 });

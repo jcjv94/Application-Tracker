@@ -26,8 +26,10 @@
                         <a href="/auth/google"><i class="material-icons right">vpn_key</i>Login with Google</a>
                         <% } %>
                     </li>
-                    <li><a href="/" >View Applications</a></li>
+                    <% if (user){ %>
+                    <li><a href="/applications">View Applications</a></li>
                     <li><a href="/applications/new">Add Application</a></li>
+                    <% } %>
                 </ul>
             </div>
         </nav>
