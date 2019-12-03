@@ -5,29 +5,73 @@
 <section class="show-page">
 
     <div class="showItem">Job Title: </div>
-    <div class="showItem"><%= application.jobTitle %> | </div>
+    <div class="showItem"><%= application.jobTitle %></div>
     <br>
 
     <div class="showItem">Employer: </div>
-    <div class="showItem"><%= application.employer %> | </div>
+    <div class="showItem"><%= application.employer %></div>
     <br>
 
     <div class="showItem">Location: </div>
-    <div class="showItem"><%= application.location %> | </div>
+    <div class="showItem"><%= application.location %></div>
     <br>
 
     <div class="showItem">Date Applied: </div>
-    <div class="showItem"><%= application.dateApplied %> | </div>
+    <div class="showItem"><%= application.dateApplied %></div>
     <br>
 
     <div class="showItem">Salary Range:</div>
-    <div class="showItem"><%= application.salaryRange %> | </div>
+    <div class="showItem"><%= application.salaryRange %></div>
     <br>
 
     <div class="showItem">Notes: </div>
-    <div class="showItem"><%= application.notes %> | </div>
+    <div class="showItem"><%= application.notes %></div>
     <br>
 
 </section>
 
+<br><br>
+<h2>Interviews</h2>
+
+<form id="add-interview-form" method="POST" action="/applications/<%=application._id %>/interviews">
+    <br>
+
+    <label for="interviewDate">Interview Date: <input type="datetime-local" name="interviewDate"></label>
+    <br>
+
+    <label for="dressCode">Dress Code: <input type="String" name="dressCode"></label>
+    <br>
+
+    <label for="notes">Notes: <input type="String" name="notes"></label>
+    <br>
+
+    <input id="addInterviewBtn" type="submit" value="Add interview">
+</form>
+<br>
+
+<% if (application.interviews) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Interview Date</th>
+          <th>Dress Code</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% application.interviews.forEach(function(interview) { %>
+          <tr>
+            <td><%= interview.interviewDate %></td>
+            <td><%= interview.dressCode %></td>
+            <td><%= interview.notes %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No interviews Yet</h5>
+  <% } %>
+</label><br>
+
 <%- include('../partials/footer') %>
+

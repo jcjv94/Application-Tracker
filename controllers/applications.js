@@ -5,8 +5,8 @@ module.exports = {
     show,
     new: newApplication,
     create,
+    delete: delApplication
     // addApplication,
-    // delApplication
 };
 
 function index(req, res) {
@@ -64,6 +64,20 @@ function create(req, res) {
 //     });
 // }
 
-// function delApplication(req, res, next) {
+// function delApplication(req, res) {
+//     Application.deleteOne(req.params.id);
+//     res.redirect('/applications');
+//   }
 
-// }
+// function delApplication(id) {
+//     applications.splice(id, 1);
+//   }
+
+function delApplication (req, res, next) {
+    User.findOne({'applications._id': req.params.id}, function(err, user){
+        user.applications.id(req.params.id).remove();
+        user.save(function(err){
+            res.redirect('/applications');
+        })
+    })
+}

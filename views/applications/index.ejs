@@ -11,6 +11,7 @@
             <th class="center-align">Date Applied</th>
             <th class="center-align">Salary Range</th>
             <th class="center-align">View Info</th>
+            <th class="center-align">Delete</th>
         </div>
     </thead>
     <tbody>
@@ -24,8 +25,14 @@
             <td class="center-align"><%=application.salaryRange%></td>
             <td class="center-align"> <a href="/applications/<%=application._id %>">
             <button type="button">DETAILS</button></a></td>
+
+            <% if (user._id.equals(user && user._id)) { %>
+            <td action="/applications/<%= application._id %>?_method=DELETE"
+                class="delete-app" method="POST"></td>
+            <button type="submit">X</button></a></td>
         </tr>
-        <% }) %>
+            <% }) %>
+        
 
     </tbody>
 </table>

@@ -1,5 +1,21 @@
 var mongoose = require('mongoose');
 
+var interviewSchema = new mongoose.Schema({
+    interviewDate: {
+        type: Date,
+        default: Date.now(),
+        require: true
+    },
+    dressCode: {
+        type: String
+    },
+    notes: {
+        type: String
+    }
+}, {
+    timestamps: true
+});
+
 
 var applicationSchema = new mongoose.Schema({
     jobTitle: {
@@ -24,7 +40,8 @@ var applicationSchema = new mongoose.Schema({
     },
     notes: {
         type: String
-    }
+    },
+    interviews: [interviewSchema]
 }, {
     timestamps: true
 });
