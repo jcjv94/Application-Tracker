@@ -18,17 +18,17 @@
     <div>
         <nav class="blue">
             <div class="nav-wrapper">
-                <ul class="right">
-                    <li>
+                <ul>
+                    <li class="right">
                         <% if (user) { %>
                         <a href="/logout"><i class="material-icons right">trending_flat</i>Log Out</a>
                         <% } else { %>
                         <a href="/auth/google"><i class="material-icons right">vpn_key</i>Login with Google</a>
                         <% } %>
                     </li>
+                    <li><a href="/" >View Applications</a></li>
+                    <li><a href="/applications/new">Add Application</a></li>
                 </ul>
-                <a href="/" >View Applications</a>
-                <a href="/applications/new">Add Application</a>
             </div>
         </nav>
     </div>
