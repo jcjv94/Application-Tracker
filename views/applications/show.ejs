@@ -2,25 +2,25 @@
 
 <h2>Application Details</h2>
 
-<table class="show-page">
+<table class="highlight z-depth-2">
     <thead>
         <div>
-            <th class="showItem">Job Title: </th>
-            <th class="showItem">Employer: </th>
-            <th class="showItem">Location: </th>
-            <th class="showItem">Date Applied: </th>
-            <th class="showItem">Salary Range:</th>
-            <th class="showItem">Notes: </th>
+            <th class="center-align">Job Title: </th>
+            <th class="center-align">Employer: </th>
+            <th class="center-align">Location: </th>
+            <th class="center-align">Date Applied: </th>
+            <th class="center-align">Salary Range:</th>
+            <th class="center-align">Notes: </th>
         </div>
     </thead>
     <tbody>
         <tr>
-            <td class="showItem"><%= application.jobTitle %></td>
-            <td class="showItem"><%= application.employer %></td>
-            <td class="showItem"><%= application.location %></td>
-            <td class="showItem"><%= application.dateApplied.toLocaleDateString() %></td>
-            <td class="showItem"><%= application.salaryRange %></td>
-            <td class="showItem"><%= application.notes %></td>
+            <td class="center-align"><%= application.jobTitle %></td>
+            <td class="center-align"><%= application.employer %></td>
+            <td class="center-align"><%= application.location %></td>
+            <td class="center-align"><%= application.dateApplied.toLocaleDateString() %></td>
+            <td class="center-align"><%= application.salaryRange %></td>
+            <td class="center-align"><%= application.notes %></td>
 
         </tr>
     </tbody>
@@ -28,8 +28,9 @@
 </table>
 
 <br><br>
-<h2>Interviews</h2>
+<h5>Add an Interview</h5>
 
+<div>
 <form id="add-interview-form" method="POST" action="/applications/<%=application._id %>/interviews">
     <br>
 
@@ -47,6 +48,8 @@
 
     <input id="addInterviewBtn" type="submit" value="Add interview">
 </form>
+</div>
+
 <br>
 
 <% if (application.interviews) { %>
@@ -63,7 +66,7 @@
         <% application.interviews.forEach(function(interview) { %>
         <tr>
             <td><%= interview.interviewDate.toLocaleDateString() %></td>
-            <td><%= interview.interviewTime.toLocaleTimeString() %></td>
+            <td><%= interview.interviewTime%></td>
             <td><%= interview.dressCode %></td>
             <td><%= interview.notes %></td>
         </tr>

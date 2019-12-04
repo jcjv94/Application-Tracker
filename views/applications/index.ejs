@@ -24,10 +24,10 @@
             <td class="center-align"><%=application.dateApplied.toLocaleDateString()%></td>
             <td class="center-align"><%=application.salaryRange%></td>
             <td class="center-align"> <a href="/applications/<%=application._id %>">
-                    <button type="button">DETAILS</button></a></td>
+                    <button class="btn waves-effect waves-light green" type="button"><i class="material-icons">visibility</i></button></a></td>
             <td>
-                <form action="/applications/<%= application._id %>?_method=DELETE" class="delete-app" method="POST">
-                    <button type="submit" >X</button></a>
+                <form action="/applications/<%= application._id %>?_method=DELETE" class="delete-app center-align" method="POST">
+                    <button class="btn waves-effect waves-light red" type="submit"><i class="material-icons">delete_forever</i></button></a>
                 </form>
             </td>
         </tr>

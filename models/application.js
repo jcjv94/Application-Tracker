@@ -7,7 +7,7 @@ var interviewSchema = new mongoose.Schema({
         required: true
     },
     interviewTime: {
-        type: Date,
+        type: String,
         default: Date.now(),
         required: true
     },
