@@ -33,10 +33,10 @@
 <form id="add-interview-form" method="POST" action="/applications/<%=application._id %>/interviews">
     <br>
 
-    <label for="interviewDate">Interview Date: <input type="datetime-local" name="interviewDate"></label>
+    <label for="interviewDate">Interview Date: <input type="text" name="interviewDate" class="datepicker"></label>
     <br>
 
-    <label for="interviewTime">Interview Time: <input type="datetime-local" name="interviewTime"></label>
+    <label for="interviewTime">Interview Time: <input type="text" name="interviewTime" class="timepicker"></label>
     <br>
 
     <label for="dressCode">Dress Code: <input type="String" name="dressCode"></label>
