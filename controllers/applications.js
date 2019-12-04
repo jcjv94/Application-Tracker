@@ -6,9 +6,25 @@ module.exports = {
     show,
     new: newApplication,
     create,
-    delete: delApplication
-    // addApplication,
+    delete: delApplication,
+    edit,
+    update
 };
+
+function update(req, res) {
+    req.body.done = req.body.dont === 'on';
+    console.log(req.body)
+    Application.update(req.para.id, req.body);
+    res.redirect(`/applications/${req.params.id}`);
+}
+
+function edit(req, res){
+    const application = Application.getOne(req.params.id);
+    res.render('applications/edit',{
+        application,
+        idx: req.params.id
+    });
+}
 
 function index(req, res) {
     Application.find({
@@ -22,12 +38,6 @@ function index(req, res) {
     });
 }
 
-//   function show(req, res) {
-//     res.render('applications/show', {
-//       application: application.getOne(req.params.id),
-//       applicationNum: parseInt(req.params.id) + 1
-//     });
-//   }
 
 function show(req, res) {
     Application.findById(req.params.id, function (err, application) {
@@ -61,21 +71,6 @@ function create(req, res) {
     });
 }
 
-// function addApplication(req, res, next) {
-//   req.application.applications.push(req.body);
-//   req.application.save(function (err) {
-//         res.redirect('applications/index');
-//     });
-// }
-
-// function delApplication(req, res) {
-//     Application.deleteOne(req.params.id);
-//     res.redirect('/applications');
-//   }
-
-// function delApplication(id) {
-//     applications.splice(id, 1);
-//   }
 
 function delApplication(req, res, next) {
     Application.findByIdAndDelete(req.params.id, (err) => {

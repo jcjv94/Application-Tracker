@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Your Application</h1>
+
+<form action="/applications <%= idx %>?_method=PUT" method="POST" autocomplete="off">
+<input type="text" name="application" value="<%= application.application %>">
+<button type="submit">Update Application</button>
+</form>
+<a href="/applications/<%=idx%>">Cancel</a>
+
+<%- include('../partials/footer') %>

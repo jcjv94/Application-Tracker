@@ -2,33 +2,30 @@
 
 <h2>Application Details</h2>
 
-<section class="show-page">
+<table class="show-page">
+    <thead>
+        <div>
+            <th class="showItem">Job Title: </th>
+            <th class="showItem">Employer: </th>
+            <th class="showItem">Location: </th>
+            <th class="showItem">Date Applied: </th>
+            <th class="showItem">Salary Range:</th>
+            <th class="showItem">Notes: </th>
+        </div>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="showItem"><%= application.jobTitle %></td>
+            <td class="showItem"><%= application.employer %></td>
+            <td class="showItem"><%= application.location %></td>
+            <td class="showItem"><%= application.dateApplied %></td>
+            <td class="showItem"><%= application.salaryRange %></td>
+            <td class="showItem"><%= application.notes %></td>
 
-    <div class="showItem">Job Title: </div>
-    <div class="showItem"><%= application.jobTitle %></div>
-    <br>
+        </tr>
+    </tbody>
 
-    <div class="showItem">Employer: </div>
-    <div class="showItem"><%= application.employer %></div>
-    <br>
-
-    <div class="showItem">Location: </div>
-    <div class="showItem"><%= application.location %></div>
-    <br>
-
-    <div class="showItem">Date Applied: </div>
-    <div class="showItem"><%= application.dateApplied %></div>
-    <br>
-
-    <div class="showItem">Salary Range:</div>
-    <div class="showItem"><%= application.salaryRange %></div>
-    <br>
-
-    <div class="showItem">Notes: </div>
-    <div class="showItem"><%= application.notes %></div>
-    <br>
-
-</section>
+</table>
 
 <br><br>
 <h2>Interviews</h2>
@@ -68,6 +65,7 @@
         <% }); %>
     </tbody>
 </table>
+<a href="/applications/<%= parseInt(application) - 1 %>/edit">Edit Application</a>
 <% } else { %>
 <h5>No interviews Yet</h5>
 <% } %>
