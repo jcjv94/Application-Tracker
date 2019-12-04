@@ -4,7 +4,12 @@ var interviewSchema = new mongoose.Schema({
     interviewDate: {
         type: Date,
         default: Date.now(),
-        require: true
+        required: true
+    },
+    interviewTime: {
+        type: Date,
+        default: Date.now(),
+        required: true
     },
     dressCode: {
         type: String
@@ -33,7 +38,7 @@ var applicationSchema = new mongoose.Schema({
     dateApplied: {
         type: Date,
         default: Date.now(),
-        require: true
+        required: true
     },
     salaryRange: {
         type: Number

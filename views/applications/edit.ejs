@@ -2,8 +2,26 @@
 
 <h1>Edit Your Application</h1>
 
-<form action="/applications <%= idx %>?_method=PUT" method="POST" autocomplete="off">
-<input type="text" name="application" value="<%= application.application %>">
+<form action="/applications/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
+    <input name="user" value="<%= user._id %>" style="visibility: hidden;">
+    <label>Job Title:
+        <input type="text" name="jobTitle" value="<%= application.jobTitle%>">
+    </label><br>
+    <label>Employer:
+        <input type="text" name="employer" value="<%= application.employer%>">
+    </label><br>
+    <label>Location:
+        <input type="text" name="location" value="<%= application.location%>">
+    </label><br>
+    <label>Date Applied:
+        <input type="text" name="dateApplied" class="datepicker" value="<%=application.dateApplied.toLocaleDateString()%>">
+    </label><br>
+    <label>Salary Range:
+        <input type="number" name="salaryRange" value="<%=application.salaryRange%>">
+    </label><br>
+    <label>Notes:
+        <input type="text" name="notes" value="<%= application.notes%>">
+    </label><br>
 <button type="submit">Update Application</button>
 </form>
 <a href="/applications/<%=idx%>">Cancel</a>

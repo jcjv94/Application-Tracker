@@ -1,4 +1,4 @@
-console.log('hello')
+// console.log('hello')
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.datepicker');
@@ -8,3 +8,8 @@ console.log('hello')
 $(document).ready(function(){
     $('.datepicker').datepicker();
   });
+
+  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
+      

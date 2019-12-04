@@ -12,18 +12,31 @@ module.exports = {
 };
 
 function update(req, res) {
-    req.body.done = req.body.dont === 'on';
-    console.log(req.body)
-    Application.update(req.para.id, req.body);
-    res.redirect(`/applications/${req.params.id}`);
+    // req.body.done = req.body.dont === 'on';
+    // console.log(req.body)
+    // Application.update(req.params.id, req.body);
+    // res.redirect(`${req.params.id}`);
+    
+    Application.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err){
+        res.redirect(`${req.params.id}`);
+    })
 }
 
 function edit(req, res){
-    const application = Application.getOne(req.params.id);
-    res.render('applications/edit',{
-        application,
-        idx: req.params.id
-    });
+    // const application = Application.findOne(req.params.id);
+    // res.render('applications/edit',{
+    //     application,
+    //     idx: req.params.id,
+    //     user: req.user
+    // });
+
+    Application.findById(req.params.id, function(err, application){
+        res.render('applications/edit', {
+            application,
+        idx: req.params.id,
+        user: req.user
+        })
+    })
 }
 
 function index(req, res) {

@@ -18,7 +18,7 @@
             <td class="showItem"><%= application.jobTitle %></td>
             <td class="showItem"><%= application.employer %></td>
             <td class="showItem"><%= application.location %></td>
-            <td class="showItem"><%= application.dateApplied %></td>
+            <td class="showItem"><%= application.dateApplied.toLocaleDateString() %></td>
             <td class="showItem"><%= application.salaryRange %></td>
             <td class="showItem"><%= application.notes %></td>
 
@@ -36,6 +36,9 @@
     <label for="interviewDate">Interview Date: <input type="datetime-local" name="interviewDate"></label>
     <br>
 
+    <label for="interviewTime">Interview Time: <input type="datetime-local" name="interviewTime"></label>
+    <br>
+
     <label for="dressCode">Dress Code: <input type="String" name="dressCode"></label>
     <br>
 
@@ -51,6 +54,7 @@
     <thead>
         <tr>
             <th>Interview Date</th>
+            <th>Interview Time</th>
             <th>Dress Code</th>
             <th>Notes</th>
         </tr>
@@ -58,14 +62,15 @@
     <tbody>
         <% application.interviews.forEach(function(interview) { %>
         <tr>
-            <td><%= interview.interviewDate %></td>
+            <td><%= interview.interviewDate.toLocaleDateString() %></td>
+            <td><%= interview.interviewTime.toLocaleTimeString() %></td>
             <td><%= interview.dressCode %></td>
             <td><%= interview.notes %></td>
         </tr>
         <% }); %>
     </tbody>
 </table>
-<a href="/applications/<%= parseInt(application) - 1 %>/edit">Edit Application</a>
+<a href="/applications/<%= application._id %>/edit">Edit Application</a>
 <% } else { %>
 <h5>No interviews Yet</h5>
 <% } %>
