@@ -1,13 +1,8 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* background: black; */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-
-a {
-  color: #00B7FF;
-}
-
-#top {
-  margin-top: 0px;
+main {
+  flex: 1 0 auto;
 }
