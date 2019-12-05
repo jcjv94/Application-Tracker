@@ -31,7 +31,7 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 
 ![Node.js](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/nodejsSmall.png)
 
-![mongoose]https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongooseSmall.png)
+![mongoose](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongooseSmall.png)
 
 ![Materialize](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/materializeSmall.png)
 
