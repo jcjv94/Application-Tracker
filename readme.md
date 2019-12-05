@@ -25,7 +25,7 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 
 ### Technologies Used:
 
-![HTML|CSS|JAVASCRIPT|MONGODB|NODE.JS|MONGOOSE|MATERIALIZE](https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/technologies.png)
+![HTML|CSS|JAVASCRIPT|MONGODB|NODE.JS|MONGOOSE|MATERIALIZE](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/technologiesUsed.png)
 
 ### Next Steps:
 
