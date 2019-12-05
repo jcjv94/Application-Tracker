@@ -4,7 +4,12 @@
 
 ### Purpose:
 
-Have you ever applied to a bunch of jobs and then forgotten what you've applied to? The purpose of this app is to help you track those job applications with ease. This app lets you add job applications, store notes, and update them as needed.
+Have you ever applied to a bunch of jobs and then forgotten what you've applied to? The purpose of this app is to help you track those job applications with ease. This app lets you: 
+- Add job applications
+- Store notes
+- View Application Details
+- Add Interviews
+- Edit & Update
 
 ### Screenshots:
 
@@ -21,3 +26,18 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 ### Technologies Used:
 
 ![HTML|CSS|JAVASCRIPT](https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/technologies.png)
+
+![mongoDB](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongodb-icon.png)
+
+![mongoose](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongoose-logo.png)
+
+![Node.js](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/nodejs-logo.png)
+
+![Materialize](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/materialize-logo.png)
+
+### Next Steps:
+
+- Add statuses
+- Add priority applications
+- Add footer
+- Make it Mobile Friendly
