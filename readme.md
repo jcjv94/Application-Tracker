@@ -27,13 +27,13 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 
 ![HTML|CSS|JAVASCRIPT](https://raw.githubusercontent.com/jcjv94/Slot-Machine/master/Images/technologies.png)
 
-![mongoDB](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongodb-icon.png)
+![mongoDB](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongodbSmal.png)
 
-![mongoose](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongoose-logo.png)
+![Node.js](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/nodejsSmall.png)
 
-![Node.js](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/nodejs-logo.png)
+![mongoose]https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/mongooseSmall.png)
 
-![Materialize](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/materialize-logo.png)
+![Materialize](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/techUsed/materializeSmall.png)
 
 ### Next Steps:
 
