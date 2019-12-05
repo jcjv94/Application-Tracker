@@ -2,28 +2,33 @@
 
 <h1>Edit Your Application</h1>
 
+<div class="container row">
 <form action="/applications/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
     <input name="user" value="<%= user._id %>" style="visibility: hidden;">
-    <label>Job Title:
+    <label class="col s6">Job Title:
         <input type="text" name="jobTitle" value="<%= application.jobTitle%>">
-    </label><br>
-    <label>Employer:
+    </label>
+    <label class="col s6">Employer:
         <input type="text" name="employer" value="<%= application.employer%>">
-    </label><br>
-    <label>Location:
+    </label>
+    <label class="col s6">Location:
         <input type="text" name="location" value="<%= application.location%>">
-    </label><br>
-    <label>Date Applied:
-        <input type="text" name="dateApplied" class="datepicker" value="<%=application.dateApplied.toLocaleDateString()%>">
-    </label><br>
-    <label>Salary Range:
+    </label>
+    <label class="col s6">Salary Range:
         <input type="number" name="salaryRange" value="<%=application.salaryRange%>">
-    </label><br>
-    <label>Notes:
+    </label>
+    <label class="col s12">Date Applied:
+        <input type="text" name="dateApplied" class="datepicker" value="<%=application.dateApplied.toLocaleDateString()%>">
+    </label>
+    <label class="col s12">Notes:
         <input type="text" name="notes" value="<%= application.notes%>">
-    </label><br>
-<button type="submit">Update Application</button>
+    </label>
+<button type="submit" class="btn waves-effect waves-light">Update <i class="material-icons right">update</i></button>
+<a class="btn waves-effect waves-light red right" href="/applications/<%=idx%>">Cancel <i class="material-icons right">cancel</i></a>
 </form>
-<a href="/applications/<%=idx%>">Cancel</a>
+</div>
+
+<br>
 
 <%- include('../partials/footer') %>
+        

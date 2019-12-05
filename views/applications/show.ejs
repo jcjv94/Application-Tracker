@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
 
-<h2>Application Details</h2>
+<h3>Application Details</h3>
 
 <table class="highlight z-depth-2">
     <thead>
         <div>
-            <th class="center-align">Job Title: </th>
-            <th class="center-align">Employer: </th>
-            <th class="center-align">Location: </th>
-            <th class="center-align">Date Applied: </th>
-            <th class="center-align">Salary Range:</th>
-            <th class="center-align">Notes: </th>
+            <th class="center-align">Job Title</th>
+            <th class="center-align">Employer</th>
+            <th class="center-align">Location</th>
+            <th class="center-align">Date Applied</th>
+            <th class="center-align">Salary Range</th>
+            <th class="center-align">Notes</th>
+            <th class="center-align">Edit</th>
         </div>
     </thead>
     <tbody>
@@ -21,6 +22,7 @@
             <td class="center-align"><%= application.dateApplied.toLocaleDateString() %></td>
             <td class="center-align"><%= application.salaryRange %></td>
             <td class="center-align"><%= application.notes %></td>
+            <td class="center-align"><a href="/applications/<%= application._id %>/edit" class="btn waves-effect waves-light green"><i class="material-icons">mode_edit</i></a></td>
 
         </tr>
     </tbody>
@@ -28,25 +30,23 @@
 </table>
 
 <br><br>
-<h5>Add an Interview</h5>
 
-<div>
+<div class="container row">
+        <h5>Add an Interview</h5>
 <form id="add-interview-form" method="POST" action="/applications/<%=application._id %>/interviews">
     <br>
 
-    <label for="interviewDate">Interview Date: <input type="text" name="interviewDate" class="datepicker"></label>
-    <br>
+    <label class="col s6"for="interviewDate">Interview Date: <input placeholder="Choose a Date" type="text" name="interviewDate" class="datepicker"></label>
 
-    <label for="interviewTime">Interview Time: <input type="text" name="interviewTime" class="timepicker"></label>
-    <br>
+    <label class="col s6" for="interviewTime">Interview Time: <input placeholder="Choose a Time" type="text" name="interviewTime" class="timepicker"></label>
 
-    <label for="dressCode">Dress Code: <input type="String" name="dressCode"></label>
-    <br>
+    <label class="col s12" for="dressCode">Dress Code: <input placeholder="Dress Code" type="text" name="dressCode"></label>
 
-    <label for="notes">Notes: <input type="String" name="notes"></label>
-    <br>
+    <label class="col s12" for="notes">Notes: <input placeholder="Add Notes" type="text" name="notes"></label>
 
-    <input id="addInterviewBtn" type="submit" value="Add interview">
+    <button class="btn waves-effect waves-light" id="addInterviewBtn" type="submit" value="Add interview"> Add Interview
+            <i class="material-icons left">add_box</i>
+    </button>
 </form>
 </div>
 
@@ -73,7 +73,6 @@
         <% }); %>
     </tbody>
 </table>
-<a href="/applications/<%= application._id %>/edit">Edit Application</a>
 <% } else { %>
 <h5>No interviews Yet</h5>
 <% } %>
