@@ -17,8 +17,11 @@
     <label class="col s6">Salary Range:
         <input type="number" name="salaryRange" value="<%=application.salaryRange%>">
     </label>
-    <label class="col s12">Date Applied:
+    <label class="col s6">Date Applied:
         <input type="text" name="dateApplied" class="datepicker" value="<%=application.dateApplied.toLocaleDateString()%>">
+    </label>
+    <label class="col s6">Application Link:
+        <input type="text" name="applicationLink" value="<%= application.applicationLink%>">
     </label>
     <label class="col s12">Notes:
         <input type="text" name="notes" value="<%= application.notes%>">

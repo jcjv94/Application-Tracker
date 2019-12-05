@@ -11,6 +11,7 @@
             <th class="center-align">Location</th>
             <th class="center-align">Date Applied</th>
             <th class="center-align">Salary Range</th>
+            <th class="center-align">Application Link</th>
             <th class="center-align">Notes</th>
             <th class="center-align">Edit</th>
         </div>
@@ -22,6 +23,7 @@
             <td class="center-align"><%= application.location %></td>
             <td class="center-align"><%= application.dateApplied.toLocaleDateString() %></td>
             <td class="center-align"><%= application.salaryRange %></td>
+            <td class="center-align"><%= application.applicationLink %></td>
             <td class="center-align"><%= application.notes %></td>
             <td class="center-align"><a href="/applications/<%= application._id %>/edit" class="btn waves-effect waves-light green"><i class="material-icons">mode_edit</i></a></td>
 

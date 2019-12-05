@@ -43,6 +43,9 @@ var applicationSchema = new mongoose.Schema({
     salaryRange: {
         type: Number
     },
+    applicationLink: {
+        type: String
+    },
     notes: {
         type: String
     },
