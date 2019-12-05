@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 
-<h3>Application Details</h3>
+<h4 class="center-align">Application Details</h4>
 
+<div class="container">
 <table class="highlight z-depth-2">
     <thead>
         <div>
@@ -28,11 +29,12 @@
     </tbody>
 
 </table>
+</div>
 
-<br><br>
+<br>
 
 <div class="container row">
-        <h5>Add an Interview</h5>
+        <h5 class="center-align">Add an Interview</h5>
 <form id="add-interview-form" method="POST" action="/applications/<%=application._id %>/interviews">
     <br>
 
@@ -44,31 +46,34 @@
 
     <label class="col s12" for="notes">Notes: <input placeholder="Add Notes" type="text" name="notes"></label>
 
-    <button class="btn waves-effect waves-light" id="addInterviewBtn" type="submit" value="Add interview"> Add Interview
+    <div class="center-align">
+        <button class="btn waves-effect waves-light" id="addInterviewBtn" type="submit" value="Add interview"> Add Interview
             <i class="material-icons left">add_box</i>
     </button>
+</div>
 </form>
 </div>
 
 <br>
 
 <% if (application.interviews) { %>
-<table>
-    <thead>
+<div class="container">
+<table class="highlight z-depth-2">
+    <thead class="center-align">
         <tr>
-            <th>Interview Date</th>
-            <th>Interview Time</th>
-            <th>Dress Code</th>
-            <th>Notes</th>
+            <th class="center-align">Interview Date</th>
+            <th class="center-align">Interview Time</th>
+            <th class="center-align">Dress Code</th>
+            <th class="center-align">Notes</th>
         </tr>
     </thead>
     <tbody>
         <% application.interviews.forEach(function(interview) { %>
         <tr>
-            <td><%= interview.interviewDate.toLocaleDateString() %></td>
-            <td><%= interview.interviewTime%></td>
-            <td><%= interview.dressCode %></td>
-            <td><%= interview.notes %></td>
+            <td class="center-align"><%= interview.interviewDate.toLocaleDateString() %></td>
+            <td class="center-align"><%= interview.interviewTime%></td>
+            <td class="center-align"><%= interview.dressCode %></td>
+            <td class="center-align"><%= interview.notes %></td>
         </tr>
         <% }); %>
     </tbody>
@@ -76,6 +81,7 @@
 <% } else { %>
 <h5>No interviews Yet</h5>
 <% } %>
-</label><br>
+</label>
+</div>
 
 <%- include('../partials/footer') %>

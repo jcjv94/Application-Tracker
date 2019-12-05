@@ -1,10 +1,10 @@
 <%- include('../partials/header') %>
 
-<h1>Edit Your Application</h1>
+<h4 class="center-align">Edit Your Application</h4>
+<br>
 
 <div class="container row">
 <form action="/applications/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
-    <input name="user" value="<%= user._id %>" style="visibility: hidden;">
     <label class="col s6">Job Title:
         <input type="text" name="jobTitle" value="<%= application.jobTitle%>">
     </label>

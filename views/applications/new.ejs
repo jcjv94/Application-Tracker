@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
-<h2>Add New Application</h2>
+<h4 class="center-align">Add New Application</h4>
+<br>
 <div class="container row">
 <form action="/applications" method="POST">
     <label class="col s6">Job Title:
@@ -20,10 +21,12 @@
     </label>
     <label class="col s12">Notes:
         <input type="text" name="notes" placeholder="Add Notes">
-    </label><br>
-    <button class="btn waves-effect waves-light" type="submit" value="Save"> Save Application
+    </label>
+    <div class="center-align">
+        <button class=" btn waves-effect waves-light" type="submit" value="Save"> Save Application
             <i class="material-icons left">add_box</i>
     </button>
+</div>
 </form>
 </div>
 
