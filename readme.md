@@ -13,15 +13,7 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 
 ### Walkthrough:
 
-![View Walkthrough](https://imgur.com/uPECHek)
-
-![Index Page](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/index%20page.png)
-
-![Add Job Application](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/create%20page.png)
-
-![Details & Add Interview](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/details%20page.png)
-
-![Edit Job Applicaiton](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/details%20page.png)
+![View Walkthrough](https://imgur.com/dk11LlC)
 
 ### Technologies Used:
 
