@@ -40,15 +40,19 @@ function edit(req, res){
 }
 
 function index(req, res) {
-    Application.find({
-        user: req.user._id
-    }, function (err, applications) {
-        console.log("APPLICATIONS: ", applications)
-        res.render('applications/index', {
-            applications,
-            user: req.user
+    if(!req.user){
+        res.redirect('/')
+    } else {
+        Application.find({
+            user: req.user._id
+        }, function (err, applications) {
+            console.log("APPLICATIONS: ", applications)
+            res.render('applications/index', {
+                applications,
+                user: req.user
+            });
         });
-    });
+    }
 }
 
 
