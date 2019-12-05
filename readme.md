@@ -11,9 +11,9 @@ Have you ever applied to a bunch of jobs and then forgotten what you've applied 
 - Add Interviews
 - Edit & Update
 
-### Screenshots:
+### Walkthrough:
 
-![Landing Page](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/landing%20page.png)
+![View Walkthrough](https://imgur.com/uPECHek)
 
 ![Index Page](https://raw.githubusercontent.com/jcjv94/Application-Tracker/master/public/images/appScreenShots/index%20page.png)
 
