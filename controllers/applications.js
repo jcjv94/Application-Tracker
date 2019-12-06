@@ -1,5 +1,4 @@
 var Application = require('../models/application');
-var User = require('../models/user');
 
 module.exports = {
     index,
@@ -12,41 +11,30 @@ module.exports = {
 };
 
 function update(req, res) {
-    // req.body.done = req.body.dont === 'on';
-    // console.log(req.body)
-    // Application.update(req.params.id, req.body);
-    // res.redirect(`${req.params.id}`);
-    
-    Application.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err){
+    Application.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, function (err) {
         res.redirect(`${req.params.id}`);
     })
 }
 
-function edit(req, res){
-    // const application = Application.findOne(req.params.id);
-    // res.render('applications/edit',{
-    //     application,
-    //     idx: req.params.id,
-    //     user: req.user
-    // });
-
-    Application.findById(req.params.id, function(err, application){
+function edit(req, res) {
+    Application.findById(req.params.id, function (err, application) {
         res.render('applications/edit', {
             application,
-        idx: req.params.id,
-        user: req.user
+            idx: req.params.id,
+            user: req.user
         })
     })
 }
 
 function index(req, res) {
-    if(!req.user){
+    if (!req.user) {
         res.redirect('/')
     } else {
         Application.find({
             user: req.user._id
         }, function (err, applications) {
-            console.log("APPLICATIONS: ", applications)
             res.render('applications/index', {
                 applications,
                 user: req.user
@@ -79,10 +67,8 @@ function create(req, res) {
     application.user = req.user;
     application.save(function (err) {
         if (err) {
-            console.log("ERROR!: ", err)
             res.redirect(`/applications/new`);
         } else {
-            console.log("It worked, no error!", application)
             res.redirect(`/applications`);
         }
     });

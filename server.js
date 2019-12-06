@@ -10,7 +10,6 @@ require('dotenv').config()
 
 
 var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var applicationsRouter = require('./routes/applications');
 var interviewsRouter = require('./routes/interviews');
 
@@ -43,7 +42,6 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-// app.use('/', usersRouter);
 app.use('/applications', applicationsRouter);
 app.use('/', interviewsRouter);
 

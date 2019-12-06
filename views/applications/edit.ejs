@@ -4,34 +4,36 @@
 <br>
 
 <div class="container row">
-<form action="/applications/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
-    <label class="col s6">Job Title:
-        <input type="text" name="jobTitle" value="<%= application.jobTitle%>">
-    </label>
-    <label class="col s6">Employer:
-        <input type="text" name="employer" value="<%= application.employer%>">
-    </label>
-    <label class="col s6">Location:
-        <input type="text" name="location" value="<%= application.location%>">
-    </label>
-    <label class="col s6">Salary Range:
-        <input type="number" name="salaryRange" value="<%=application.salaryRange%>">
-    </label>
-    <label class="col s6">Date Applied:
-        <input type="text" name="dateApplied" class="datepicker" value="<%=application.dateApplied.toLocaleDateString()%>">
-    </label>
-    <label class="col s6">Application Link:
-        <input type="text" name="applicationLink" value="<%= application.applicationLink%>">
-    </label>
-    <label class="col s12">Notes:
-        <input type="text" name="notes" value="<%= application.notes%>">
-    </label>
-<button type="submit" class="btn waves-effect waves-light">Update <i class="material-icons right">update</i></button>
-<a class="btn waves-effect waves-light red right" href="/applications/<%=idx%>">Cancel <i class="material-icons right">cancel</i></a>
-</form>
+    <form action="/applications/<%= idx %>?_method=PUT" method="POST" autocomplete="off">
+        <label class="col s6">Job Title:
+            <input type="text" name="jobTitle" value="<%= application.jobTitle%>">
+        </label>
+        <label class="col s6">Employer:
+            <input type="text" name="employer" value="<%= application.employer%>">
+        </label>
+        <label class="col s6">Location:
+            <input type="text" name="location" value="<%= application.location%>">
+        </label>
+        <label class="col s6">Salary Range:
+            <input type="number" name="salaryRange" value="<%=application.salaryRange%>">
+        </label>
+        <label class="col s6">Date Applied:
+            <input type="text" name="dateApplied" class="datepicker"
+                value="<%=application.dateApplied.toLocaleDateString()%>">
+        </label>
+        <label class="col s6">Application Link:
+            <input type="text" name="applicationLink" value="<%= application.applicationLink%>">
+        </label>
+        <label class="col s12">Notes:
+            <input type="text" name="notes" value="<%= application.notes%>">
+        </label>
+        <button type="submit" class="btn waves-effect waves-light">Update <i
+                class="material-icons right">update</i></button>
+        <a class="btn waves-effect waves-light red right" href="/applications/<%=idx%>">Cancel <i
+                class="material-icons right">cancel</i></a>
+    </form>
 </div>
 
 <br>
 
 <%- include('../partials/footer') %>
-        

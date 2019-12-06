@@ -3,34 +3,34 @@
 <h4 class="center-align">Add New Application</h4>
 <br>
 <div class="container row">
-<form action="/applications" method="POST">
-    <label class="col s6">Job Title:
-        <input type="text" name="jobTitle" placeholder="Add a Job Title">
-    </label>
-    <label class="col s6">Employer:
-        <input type="text" name="employer" placeholder="Add an Employer">
-    </label>
-    <label class="col s6">Location:
-        <input type="text" name="location" placeholder="Add Location">
-    </label>
-    <label class="col s6">Salary Range:
-        <input type="number" name="salaryRange" placeholder="Add Salary">
-    </label>
-    <label class="col s6">Date Applied:
-        <input type="text" name="dateApplied" class="datepicker" placeholder="Select a Date">
-    </label>
-    <label class="col s6">Application Link:
-        <input type="text" name="applicationLink" placeholder="Add Job Link">
-    </label>
-    <label class="col s12">Notes:
-        <input type="text" name="notes" placeholder="Add Notes">
-    </label>
-    <div class="center-align">
-        <button class=" btn waves-effect waves-light" type="submit" value="Save"> Save Application
-            <i class="material-icons left">add_box</i>
-    </button>
-</div>
-</form>
+    <form action="/applications" method="POST">
+        <label class="col s6">Job Title:
+            <input type="text" name="jobTitle" placeholder="Add a Job Title">
+        </label>
+        <label class="col s6">Employer:
+            <input type="text" name="employer" placeholder="Add an Employer">
+        </label>
+        <label class="col s6">Location:
+            <input type="text" name="location" placeholder="Add Location">
+        </label>
+        <label class="col s6">Salary Range:
+            <input type="number" name="salaryRange" placeholder="Add Salary">
+        </label>
+        <label class="col s6">Date Applied:
+            <input type="text" name="dateApplied" class="datepicker" placeholder="Select a Date">
+        </label>
+        <label class="col s6">Application Link:
+            <input type="text" name="applicationLink" placeholder="Add Job Link">
+        </label>
+        <label class="col s12">Notes:
+            <input type="text" name="notes" placeholder="Add Notes">
+        </label>
+        <div class="center-align">
+            <button class=" btn waves-effect waves-light" type="submit" value="Save"> Save Application
+                <i class="material-icons left">add_box</i>
+            </button>
+        </div>
+    </form>
 </div>
 
 <%- include('../partials/footer') %>
